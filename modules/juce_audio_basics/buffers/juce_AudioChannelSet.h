@@ -232,6 +232,8 @@ public:
     */
     static AudioChannelSet JUCE_CALLTYPE create7point1point4();
 
+    static AudioChannelSet JUCE_CALLTYPE create7point0point6();
+    
     /** Creates a set for Dolby Atmos 7.1.6 surround setup (left, right, centre, leftSurroundSide, rightSurroundSide, leftSurroundRear, rightSurroundRear, LFE, topFrontLeft, topFrontRight, topSideLeft, topSideRight, topRearLeft, topRearRight).
 
         Is equivalent to: k71_6 (VST), n/a (AAX), n/a (CoreAudio)
@@ -248,6 +250,9 @@ public:
 
         Is equivalent to: k91_6 (VST3), kAudioChannelLayoutTag_Atmos_9_1_6 (CoreAudio).
     */
+    static AudioChannelSet JUCE_CALLTYPE create9point0point4();
+    static AudioChannelSet JUCE_CALLTYPE create9point1point4();
+    static AudioChannelSet JUCE_CALLTYPE create9point0point6();
     static AudioChannelSet JUCE_CALLTYPE create9point1point6();
 
     //==============================================================================
@@ -419,6 +424,38 @@ public:
         bottomRearCentre    = 70, /**< Bottom Rear Center (Brc)  */
         bottomRearRight     = 71, /**< Bottom Rear Right (Brr)  */
 
+        // sixth-order ambisonic
+        ambisonicACN36      = 72, /**< Sixth-order ambisonic channel number 36. */
+        ambisonicACN37      = 73, /**< Sixth-order ambisonic channel number 37. */
+        ambisonicACN38      = 74, /**< Sixth-order ambisonic channel number 38. */
+        ambisonicACN39      = 75, /**< Sixth-order ambisonic channel number 39. */
+        ambisonicACN40      = 76, /**< Sixth-order ambisonic channel number 40. */
+        ambisonicACN41      = 77, /**< Sixth-order ambisonic channel number 41. */
+        ambisonicACN42      = 78, /**< Sixth-order ambisonic channel number 42. */
+        ambisonicACN43      = 79, /**< Sixth-order ambisonic channel number 43. */
+        ambisonicACN44      = 80, /**< Sixth-order ambisonic channel number 44. */
+        ambisonicACN45      = 81, /**< Sixth-order ambisonic channel number 45. */
+        ambisonicACN46      = 82, /**< Sixth-order ambisonic channel number 46. */
+        ambisonicACN47      = 83, /**< Sixth-order ambisonic channel number 47. */
+        ambisonicACN48      = 84, /**< Sixth-order ambisonic channel number 48. */
+
+        // seventh-order ambisonic
+        ambisonicACN49      = 85, /**< Seventh-order ambisonic channel number 49. */
+        ambisonicACN50      = 86, /**< Seventh-order ambisonic channel number 50. */
+        ambisonicACN51      = 87, /**< Seventh-order ambisonic channel number 51. */
+        ambisonicACN52      = 88, /**< Seventh-order ambisonic channel number 52. */
+        ambisonicACN53      = 89, /**< Seventh-order ambisonic channel number 53. */
+        ambisonicACN54      = 90, /**< Seventh-order ambisonic channel number 54. */
+        ambisonicACN55      = 91, /**< Seventh-order ambisonic channel number 55. */
+        ambisonicACN56      = 92, /**< Seventh-order ambisonic channel number 56. */
+        ambisonicACN57      = 93, /**< Seventh-order ambisonic channel number 57. */
+        ambisonicACN58      = 94, /**< Seventh-order ambisonic channel number 58. */
+        ambisonicACN59      = 95, /**< Seventh-order ambisonic channel number 59. */
+        ambisonicACN60      = 96, /**< Seventh-order ambisonic channel number 60. */
+        ambisonicACN61      = 97, /**< Seventh-order ambisonic channel number 61. */
+        ambisonicACN62      = 98, /**< Seventh-order ambisonic channel number 62. */
+        ambisonicACN63      = 99, /**< Seventh-order ambisonic channel number 63. */
+        
         //==============================================================================
         discreteChannel0    = 128  /**< Non-typed individual channels are indexed upwards from this value. */
     };
@@ -435,7 +472,7 @@ public:
     //==============================================================================
     enum
     {
-        maxChannelsOfNamedLayout = 36
+        maxChannelsOfNamedLayout = 64
     };
 
     /** Adds a channel to the set. */
