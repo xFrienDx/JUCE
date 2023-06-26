@@ -1215,10 +1215,10 @@ int32 AudioProcessor::getAAXPluginIDForMainBusConfig (const AudioChannelSet& mai
             AudioChannelSet::ambisonic (1),
             AudioChannelSet::ambisonic (2),
             AudioChannelSet::ambisonic (3),
-            /*AudioChannelSet::create5point0point2(),
+            AudioChannelSet::create5point0point2(),
              AudioChannelSet::create5point1point2(),
              AudioChannelSet::create5point0point4(),
-             AudioChannelSet::create5point1point4(),*/
+             AudioChannelSet::create5point1point4(),
              AudioChannelSet::create7point0point4(),
              AudioChannelSet::create7point1point4(),
              AudioChannelSet::create7point0point6(),

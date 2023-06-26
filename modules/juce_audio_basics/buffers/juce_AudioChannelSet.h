@@ -111,6 +111,8 @@ public:
     */
     static AudioChannelSet JUCE_CALLTYPE create5point0();
 
+    static AudioChannelSet JUCE_CALLTYPE create5point0point2();
+    static AudioChannelSet JUCE_CALLTYPE create5point0point4();
 
     /** Creates a set for a 5.1 surround setup (left, right, centre, leftSurround, rightSurround, LFE).
 

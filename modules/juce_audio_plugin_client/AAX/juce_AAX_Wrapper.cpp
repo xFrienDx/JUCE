@@ -186,10 +186,19 @@ namespace AAXClasses
 
         { AAX_eStemFormat_5_0,      { AudioChannelSet::left, AudioChannelSet::centre, AudioChannelSet::right, AudioChannelSet::leftSurround, AudioChannelSet::rightSurround,
                                       AudioChannelSet::unknown, AudioChannelSet::unknown, AudioChannelSet::unknown, AudioChannelSet::unknown, AudioChannelSet::unknown } },
+        { AAX_eStemFormat_5_0_2,    { AudioChannelSet::left, AudioChannelSet::centre, AudioChannelSet::right, AudioChannelSet::leftSurround, AudioChannelSet::rightSurround, AudioChannelSet::topSideLeft, AudioChannelSet::topSideRight } },
+
+        { AAX_eStemFormat_5_0_4,    { AudioChannelSet::left, AudioChannelSet::centre, AudioChannelSet::right, AudioChannelSet::leftSurround, AudioChannelSet::rightSurround,
+                                      AudioChannelSet::topFrontLeft, AudioChannelSet::topFrontRight, AudioChannelSet::topRearLeft, AudioChannelSet::topRearRight } },
 
         { AAX_eStemFormat_5_1,      { AudioChannelSet::left, AudioChannelSet::centre, AudioChannelSet::right, AudioChannelSet::leftSurround, AudioChannelSet::rightSurround,
                                       AudioChannelSet::LFE, AudioChannelSet::unknown, AudioChannelSet::unknown, AudioChannelSet::unknown, AudioChannelSet::unknown } },
 
+        { AAX_eStemFormat_5_1_2,    { AudioChannelSet::left, AudioChannelSet::centre, AudioChannelSet::right, AudioChannelSet::leftSurround, AudioChannelSet::rightSurround,
+                                      AudioChannelSet::LFE, AudioChannelSet::topSideLeft, AudioChannelSet::topSideRight } },
+
+        { AAX_eStemFormat_5_1_4,    { AudioChannelSet::left, AudioChannelSet::centre, AudioChannelSet::right, AudioChannelSet::leftSurround, AudioChannelSet::rightSurround, AudioChannelSet::LFE, AudioChannelSet::topFrontLeft, AudioChannelSet::topFrontRight, AudioChannelSet::topRearLeft, AudioChannelSet::topRearRight } },
+        
         { AAX_eStemFormat_6_0,      { AudioChannelSet::left, AudioChannelSet::centre, AudioChannelSet::right, AudioChannelSet::leftSurround, AudioChannelSet::centreSurround,
                                       AudioChannelSet::rightSurround, AudioChannelSet::unknown, AudioChannelSet::unknown, AudioChannelSet::unknown, AudioChannelSet::unknown } },
 
@@ -251,7 +260,11 @@ namespace AAXClasses
         AAX_eStemFormat_LCRS,
         AAX_eStemFormat_Quad,
         AAX_eStemFormat_5_0,
+        AAX_eStemFormat_5_0_2,
+        AAX_eStemFormat_5_0_4,
         AAX_eStemFormat_5_1,
+        AAX_eStemFormat_5_1_2,
+        AAX_eStemFormat_5_1_4,
         AAX_eStemFormat_6_0,
         AAX_eStemFormat_6_1,
         AAX_eStemFormat_7_0_SDDS,
@@ -319,7 +332,11 @@ namespace AAXClasses
         if (set == AudioChannelSet::createLCRS())           return AAX_eStemFormat_LCRS;
         if (set == AudioChannelSet::quadraphonic())         return AAX_eStemFormat_Quad;
         if (set == AudioChannelSet::create5point0())        return AAX_eStemFormat_5_0;
+        if (set == AudioChannelSet::create5point0point2())  return AAX_eStemFormat_5_0_2;
+        if (set == AudioChannelSet::create5point0point4())  return AAX_eStemFormat_5_0_4;
         if (set == AudioChannelSet::create5point1())        return AAX_eStemFormat_5_1;
+        if (set == AudioChannelSet::create5point1point2())  return AAX_eStemFormat_5_1_2;
+        if (set == AudioChannelSet::create5point1point4())  return AAX_eStemFormat_5_1_4;
         if (set == AudioChannelSet::create6point0())        return AAX_eStemFormat_6_0;
         if (set == AudioChannelSet::create6point1())        return AAX_eStemFormat_6_1;
         if (set == AudioChannelSet::create7point0())        return AAX_eStemFormat_7_0_DTS;
@@ -356,7 +373,11 @@ namespace AAXClasses
                 case AAX_eStemFormat_LCRS:       return AudioChannelSet::createLCRS();
                 case AAX_eStemFormat_Quad:       return AudioChannelSet::quadraphonic();
                 case AAX_eStemFormat_5_0:        return AudioChannelSet::create5point0();
+                case AAX_eStemFormat_5_0_2:      return AudioChannelSet::create5point0point2();
+                case AAX_eStemFormat_5_0_4:      return AudioChannelSet::create5point0point4();
                 case AAX_eStemFormat_5_1:        return AudioChannelSet::create5point1();
+                case AAX_eStemFormat_5_1_2:      return AudioChannelSet::create5point1point2();
+                case AAX_eStemFormat_5_1_4:      return AudioChannelSet::create5point1point4();
                 case AAX_eStemFormat_6_0:        return AudioChannelSet::create6point0();
                 case AAX_eStemFormat_6_1:        return AudioChannelSet::create6point1();
                 case AAX_eStemFormat_7_0_SDDS:   return AudioChannelSet::create7point0SDDS();
